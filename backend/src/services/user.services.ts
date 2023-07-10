@@ -37,7 +37,9 @@ interface GetAllUserServiceReturnAttr {
 }
 interface UserData {
     _id: string,
-    email: string
+    email: string,
+    lastname: string,
+    firstnmame: string
 }
 export async function getAllUserService(): Promise<GetAllUserServiceReturnAttr> {
     const dBConflictError = new DBConflictError([])
@@ -46,7 +48,7 @@ export async function getAllUserService(): Promise<GetAllUserServiceReturnAttr> 
 
         return {
             data: userList.map<UserData>(itm => {
-                return pick<UserData>(itm, "_id", "email")
+                return pick<UserData>(itm, "_id", "email", "lastname", "firstname")
             })
         }
 

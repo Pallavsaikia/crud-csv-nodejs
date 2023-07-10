@@ -1,0 +1,6 @@
+.action-text:hover{
+    cursor: pointer;
+}
+.action-text{
+    color: rgb(21, 145, 145);
+}
