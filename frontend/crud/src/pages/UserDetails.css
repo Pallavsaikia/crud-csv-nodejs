@@ -1,0 +1,17 @@
+.table-custom{
+    margin-top: 3rem;
+}
+.card-custom{
+    padding: 2rem;
+}
+
+.header-card{
+    display: flex;
+    align-items: center;
+}
+.header-card>h1{
+    width: 100%;
+}
+.header-card>div{
+    width: 100px;
+}

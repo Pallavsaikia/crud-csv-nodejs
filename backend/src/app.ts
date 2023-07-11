@@ -1,6 +1,6 @@
 import express, { Request, Response, NextFunction } from 'express'
 import morgan from 'morgan'
-import { cors } from './cors';
+import { cors } from './cors'
 import { ErrorHandler, PageNotFoundError } from './middleware';
 
 import { app as apiRoutes } from './routes'
@@ -11,7 +11,7 @@ import { app as apiRoutes } from './routes'
 
 
 export function app(database: Function) {
-    
+
     const app = express();
     //todo add helmet
     app.use(morgan('dev'))
@@ -43,7 +43,7 @@ export function app(database: Function) {
     // //global error response--just throw error
     app.use(ErrorHandler);
 
-    
+
 
     return app
 }

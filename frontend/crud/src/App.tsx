@@ -3,15 +3,18 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
-import { PageNotFound, Dasboard } from './pages';
-import { NavBar } from './components';
+import { PageNotFound, DasboardPage,UserDetailsPage } from './pages';
+import { Alert, NavBar } from './components';
+import { Config } from './meta';
 
 
 function defaultWrapper(component: JSX.Element) {
   return (
-    <NavBar>
-      {component}
-    </NavBar>
+    <Alert duration={Config.ALERT_DURATION}>
+      <NavBar>
+        {component}
+      </NavBar>
+    </Alert>
   )
 }
 
@@ -20,7 +23,8 @@ function App() {
     <BrowserRouter>
       <Routes >
         <Route path='*' element={<PageNotFound />} />
-        <Route path="/" element={defaultWrapper(<Dasboard />)} />
+        <Route path="/" element={defaultWrapper(<DasboardPage />)} />
+        <Route path="/user/:id" element={defaultWrapper(<UserDetailsPage />)} />
       </Routes>
     </BrowserRouter>
   );

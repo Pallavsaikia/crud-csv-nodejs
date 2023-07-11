@@ -14,7 +14,7 @@ router.post('/',
 
 router.get('/', handle(getAllData))
 router.get('/:id', handle(getUserDataByID))
-router.delete('/:id', handle(deleteDataByID))
+router.get('/delete/:id', handle(deleteDataByID))
 router.put('/:id',
     createOUpdateValidationSchema,
     validateRequestSchema,

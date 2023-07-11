@@ -1,6 +1,6 @@
 import { ServerError } from "../error"
 
-interface User {
+export interface UserDetails {
     firstname: string,
     lastname: string,
     email: string,
@@ -9,14 +9,15 @@ interface User {
     age:number,
     createdAt:string,
     updatedAt:string
+        
 }
 
 
-export interface CreateUserResponse {
+export interface GetUserByIDResponse {
     success: boolean,
     message: string,
     data?: {
-        user: User
+        user: UserDetails
     },
     error?: ServerError[]
 

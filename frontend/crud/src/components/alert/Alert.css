@@ -1,0 +1,85 @@
+.alertNotification-primary{
+    --bs-alert-bg: transparent;
+    --bs-alert-padding-x: 0rem;
+    --bs-alert-padding-y: 0rem;
+    --bs-alert-margin-bottom: 1rem;
+    --bs-alert-color: inherit;
+    --bs-alert-border-color: transparent;
+    --bs-alert-border: 1px solid var(--bs-alert-border-color);
+    --bs-alert-border-radius: 0.375rem;
+    width: 300px;
+    padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
+    margin-bottom: var(--bs-alert-margin-bottom);
+    background-color: #696cff;
+    /* border-color: #696cff; */
+    /* border: var(--bs-alert-border); */
+    border-radius: var(--bs-alert-border-radius);
+    position: fixed;
+    right: 1%;
+    bottom:2%; 
+    z-index: 10000000;
+  }
+  
+  .alertNotification-danger{
+    --bs-alert-bg: transparent;
+    --bs-alert-padding-x: 0rem;
+    --bs-alert-padding-y: 0rem;
+    --bs-alert-margin-bottom: 1rem;
+    --bs-alert-color: inherit;
+    --bs-alert-border-color: transparent;
+    --bs-alert-border: 1px solid var(--bs-alert-border-color);
+    --bs-alert-border-radius: 0.375rem;
+    width: 300px;
+    padding: var(--bs-alert-padding-y) var(--bs-alert-padding-x);
+    margin-bottom: var(--bs-alert-margin-bottom);
+    background-color: #fa535b;
+    /* border-color: #696cff; */
+    /* border: var(--bs-alert-border); */
+    border-radius: var(--bs-alert-border-radius);
+    position: fixed;
+    right: 1%;
+    bottom:2%; 
+    z-index: 10000000;
+  }
+  
+  
+  .alert-header{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    padding: 1rem;
+  }
+  .alert-header-text{
+    color: #ffffff;
+    font-weight: 600!important;
+    font-size: larger;
+  }
+  .alert-header-div{
+    width: 90%;
+  
+  }
+  .alert-button-close {
+    align-content: flex-end;
+    box-sizing: content-box;
+    width: 1em;
+    height: 1em;
+    padding: .25em .25em;
+    color: #ffffff;
+    background:  url("data:image/svg+xml,%3csvg xmlns=%27http://www.w3.org/2000/svg%27 viewBox=%270 0 16 16%27 fill=%27%23000%27%3e%3cpath d=%27M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z%27/%3e%3c/svg%3e") center/1em auto no-repeat;
+    border: 0;
+    border-radius: .375rem;
+    opacity: .5;
+    position: relative;
+    
+  }
+  
+  .alert-message{
+    background-color:white;
+    border-radius: 0 0 0.375rem 0.375rem;
+    /* border-color: #696cff; */
+    padding: 1rem;
+    letter-spacing: 0.4px;
+    font-weight: 100!important;
+    font-size: 0.8rem;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+  }

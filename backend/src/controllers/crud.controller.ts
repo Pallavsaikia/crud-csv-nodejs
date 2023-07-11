@@ -47,6 +47,7 @@ export async function deleteDataByID(req: Request, res: Response, next: NextFunc
 
 export async function updateDataByID(req: Request, res: Response, next: NextFunction) {
     const { email, lastname, firstname, isadult, age } = req.body
+    console.log(isadult)
     const doc = await finduserByIDAndUpdateService({
         email: email,
         lastname: lastname,

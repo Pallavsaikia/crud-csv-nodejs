@@ -8,8 +8,10 @@ interface SwitchProps {
     defaultVal: boolean
 }
 export const Switch = ({ reference, text, defaultVal }: SwitchProps) => {
+
     function handleChange(e: any) {
-        reference.current.value = e.checked
+        console.log(reference.current.checked)
+        reference.current.value = reference.current.checked.toString()
     }
     return (
         <div className="switchdiv form-switch">

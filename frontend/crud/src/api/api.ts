@@ -2,12 +2,13 @@ import axios from "axios"
 import { URLs } from "../meta/urls"
 import { UserListResponse } from "../data/userlist"
 import { CreateUserResponse } from "../data/create-user-response"
+import { GetUserByIDResponse } from "../data/get-user-by-id"
+import { DeleteUserByIDResponse } from "../data/delete-user-by-id"
 
 const enum METHOD {
     GET = 'get',
     POST = 'post',
     PUT = 'put',
-    DELETE = 'delete'
 }
 
 
@@ -54,8 +55,25 @@ interface CreateUserData {
     age: number,
     isadult: boolean
 }
-export async function createUser(createUser: CreateUserData): Promise<CreateUserResponse> {
-    const res = await axiosHandler<CreateUserResponse>(METHOD.POST, URLs.CRUD_URL, createUser)
+export async function createUser(createUserdata: CreateUserData): Promise<CreateUserResponse> {
+    const res = await axiosHandler<CreateUserResponse>(METHOD.POST, URLs.CRUD_URL, createUserdata)
 
+    return res
+}
+
+
+export async function getUserByID(_id: string): Promise<GetUserByIDResponse> {
+    const res = await axiosHandler<GetUserByIDResponse>(METHOD.GET, URLs.CRUD_URL + _id, null)
+    return res
+}
+
+export async function updateUserByID(createUserdata: CreateUserData, _id: string): Promise<CreateUserResponse> {
+    const res = await axiosHandler<CreateUserResponse>(METHOD.PUT, URLs.CRUD_URL + _id, createUserdata)
+    return res
+}
+
+
+export async function deleteByID(_id: string): Promise<DeleteUserByIDResponse> {
+    const res = await axiosHandler<DeleteUserByIDResponse>(METHOD.GET, URLs.CRUD_URL + "delete/" + _id, null)
     return res
 }

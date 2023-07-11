@@ -3,3 +3,8 @@
     padding-right: 15rem;
     margin-top: 3rem;
 }
+.parent-div{
+    overflow-y:scroll; 
+    position:relative;
+    height: 100vh;
+}

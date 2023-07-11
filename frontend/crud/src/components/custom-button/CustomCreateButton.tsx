@@ -11,7 +11,7 @@ export const CustomCreateButton = ({ danger, callback, text }: CustomCreateButto
             {<div className={`add-btn${danger ? '-red' : ''}`} onClick={e => { callback() }}>
                 <span className='btn-txt'>{text}</span>
             </div>}
-            <div className='line' />
+            <div className={`line${danger ? '-red' : ''}`} />
         </div>
     )
 }
