@@ -1,7 +1,6 @@
 import http from 'http'
 import { app } from './app'
 import { DBConnect } from './database';
-import { User } from './models/user';
 const port = process.env.PORT || 3000;
 
 
