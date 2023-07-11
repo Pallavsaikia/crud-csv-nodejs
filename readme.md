@@ -128,7 +128,7 @@ super("user", userSchema, data)
 ```
 The first  parameter is the name of the table and also the file that stores the data
 
-> Note: Currently only supports boolean , string and number
+> Note: Currently only supports boolean , string , date and number
 
 The scehma processes the document fields into appropriate type when fetched.
 
